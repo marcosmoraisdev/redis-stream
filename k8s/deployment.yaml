@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: poc-redis
+  name: poc-redis
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: poc-redis
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: poc-redis
+    spec:
+      containers:
+      - image: marcosomoraisdev/poc-redis:v1
+        imagePullPolicy: Always
+        name: poc-redis
+        resources: {}
+status: {}
+

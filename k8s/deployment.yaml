@@ -6,7 +6,7 @@ metadata:
     app: poc-redis
   name: poc-redis
 spec:
-  replicas: 3
+  replicas: 4
   selector:
     matchLabels:
       app: poc-redis
